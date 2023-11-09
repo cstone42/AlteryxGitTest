@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="270" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Disable">False</Value>
+          <Value name="BatchCommit">False</Value>
+          <Value name="FilePath">CustomerID</Value>
+          <Value name="TargetPath">CustomerID</Value>
+          <Value name="SelfCommit">True</Value>
+          <Value name="TargetDirectory">[Folder name]</Value>
+          <Value name="RepoOwner">cstone42</Value>
+          <Value name="GitHubRepo">AlteryxGitTest</Value>
+          <Value name="Branch">main</Value>
+          <Value name="Protected">False</Value>
+          <Value name="CommitMessage">Commit message here...</Value>
+          <Value name="BaseAddress">https://api.github.com</Value>
+          <Value name="AccessToken">47FBD608DD910B67CA603319FD0114986B7A7394DBBC9C313141DA13340504919771F647FD5E490A0D5C3BAE6E4E17ADF532FE88F8F310DBF22E1667C1EC513379EEED885547C8509F1C8DB936352E2EB662E2EF46D026C705459AF75DB4862D3995DF7AA67E94DD54C122F9B0D90FD080FBAB17912F9B18F12736458FF8EE810DB25FCB8A2979F11AC00C7E698E3A524586D378AA6ADCA35D481D9D6BB57A1B6DC79FB2A593080E8CB9F28BF4AA1F78F361546F925B4833E28DFB5AB7013DDDE014E7FC1B5C50AC0A896152266D9305990731CCEBD028032FA01711463A7E15902738B8DC87E523928B760E8674D6EDA9FFD3BF8358396918A476C61A3A2F064308779F91623C039EEA41B000CD53E0C1D26630EF3D494D4594BFA51D7FE1BC105267260A7C564C8C37E2D4F1CCC0822A7DD121D71D11EC7509A89B065036A0E9D4D1BE8FF70F31F9D71BA92632AE7AAE4858EE99957</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="GitHub_Commit_1_0\GitHub Commit.yxmc" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="174" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="Field2" />
+          </Fields>
+          <Data>
+            <r>
+              <c>f1</c>
+              <c>f2</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="4" Connection="Input5" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>GitTestExternalGit</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5698f696-8ffb-44d8-b5c1-fcb12f3b5bac" />
+      <Telemetry>
+        <PreviousWorkflowId value="a1d050bf-92ce-44a7-81a2-d50dc006b380" />
+        <OriginWorkflowId value="f9d2ea60-fc82-4bf8-96c7-3f3df697304b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
