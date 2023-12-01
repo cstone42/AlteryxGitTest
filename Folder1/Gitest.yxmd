@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="162" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Disable">False</Value>
+          <Value name="BatchCommit">False</Value>
+          <Value name="FilePath">RecordID</Value>
+          <Value name="TargetPath">RecordID</Value>
+          <Value name="SelfCommit">True</Value>
+          <Value name="TargetDirectory">[Folder name]</Value>
+          <Value name="RepoOwner">cstone42</Value>
+          <Value name="GitHubRepo">AnalyticsEngineering/Alteryx_uDeploy</Value>
+          <Value name="Branch">main</Value>
+          <Value name="Protected">True</Value>
+          <Value name="CommitMessage">Commit message here...</Value>
+          <Value name="BaseAddress">https://github.ford.com/</Value>
+          <Value name="AccessToken">4A5C14D9AC9BD5869CFC44ABEFC641DF6A938E89B3DB3D68F1F6B2F65B9B87AA58EEA90459C50FAD51E3F42A21A02459075CB7EFE016789E2261D0354E8456FE367F3AE66A81E6FAB3703BB90E5F1E1A41E7E6F2A1D0B9AD5BC4B2D62FEE9287A733AC63D01FEB4D9DA5C665F26EC018E450EA7487E62EA2254193444FD0047E3946A254045E524D1048EBB3EAE60C7A41B829B741C15C2612A60F23354C90506427ACCE3BF4F558D2515CB09E42E53A2624B05D2DAB36E34BDD8674A97983B714E6FF887A8B16C3459D871CD37F8208C1BF3A858364FD1B4FA163E50EC29AC7947CBD24C7E3984295A95CBAB8C8C8A5A2A126B3011381230D2C36B36F68CEF766147C0A73A0896F29C27E9639D404BD43CCF8333EF7D3AAD61100E2B47B83C88CAA6B0E204ECCC28E53FA237B446ECD9ABBAD31CF05895D6086EB854373022F9F16CFAC8C953E323C29724C798F3CB59EDCC9C7BE13F1BC2592143B32750AB67EE923DC0DF621DC9F55577B05E75788BF7FDCD0EBDADD3B2A25E739CDE91019D0CBFAD069FF5E3478C4065ECF60B6C8C8330CA947E48EB03F809F3A376A15391EE7EABCB7DB6</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="GitHub_Commit_1_0\GitHub Commit.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="258" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Program Files\Alteryx\Samples\data\SampleData\Clothing_Search.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Clothing_Search.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" size="254" source="File: C:\Program Files\Alteryx\Samples\data\SampleData\Clothing_Search.csv" type="V_String" />
+            <Field name="ITEM" size="254" source="File: C:\Program Files\Alteryx\Samples\data\SampleData\Clothing_Search.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection Wireless="True">
+      <Origin ToolID="4" Connection="Output254" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="4" Connection="Input5" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>GitTest</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="a1d050bf-92ce-44a7-81a2-d50dc006b380" />
+      <Telemetry>
+        <PreviousWorkflowId value="dba38edc-c86b-474f-b394-9d7d04402aa5" />
+        <OriginWorkflowId value="f9d2ea60-fc82-4bf8-96c7-3f3df697304b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
